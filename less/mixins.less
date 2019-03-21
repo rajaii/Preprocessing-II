@@ -1,1 +1,21 @@
 // Mixins in here
+
+.button-mixin(@w; @h; @bkc; @tc) {
+    width: @w;
+    height: @h;
+    background-color: @bkc;
+    color: @tc;
+    
+}
+
+.btn {
+    .button-mixin(100%, 35px, blue, white);
+    border-radius: 10px;
+    padding-top: 12px;
+    text-align: center;
+
+    &:hover {
+        background-color: white;
+        color: blue;
+    }
+}
