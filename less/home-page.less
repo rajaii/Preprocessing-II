@@ -1,24 +1,80 @@
+
+.head {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 20px;
+  border-bottom: 2px dashed @navigation-border;
+  padding-bottom: 20px;
+  width: 100%;
+
+  @media @mobile {
+    display: flex;
+    flex-direction: column;
+  }
+   
+  h1 {
+    margin-left: 274px;
+    
+    @media @mobile {
+      margin-left: 0px;
+      text-align: center;
+    }
+  
+  }
+
+}
+
+
 .home {
+
+  .sec1 {
+    h2 {
+      margin-top: 20px;
+      margin-bottom: 20px;
+    }
+    p {
+      border-bottom: 2px dashed @navigation-border;
+      padding-bottom: 20px;
+    }
+  }
+
 
   .content-section {
     margin: 30px 0;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    
+    @media @mobile {
+      display: flex;
+      flex-direction: column;
 
+    }
    
     
     .text-content {
       width: 48%;
       padding-right: 1%;
+
+      @media @mobile {
+        width: 100%;
+      }
     }
 
     .img-content {
       width: 48%;
       padding-left: 1%;
-
+      @media @mobile {
+        width: 100%;
+      }
+      
       img {
         border-radius: 10px;
+        
+        @media @mobile {
+          width: 100%;
+        }
       }
     }
   }
@@ -26,6 +82,12 @@
   .inverse-content {
     padding-bottom: 30px;
     border-bottom: 2px dashed @navigation-border;
+
+    @media @mobile {
+      display: flex;
+      flex-direction: column-reverse;
+    }
+    
 
     .text-content {
       padding-left: 1%;
@@ -42,6 +104,10 @@
     width: 75%;
     margin: 0 auto 30px;
 
+    @media @mobile {
+      width: 100%;
+    }
+
     img {
       border-radius: 10px;
     }
@@ -53,9 +119,37 @@
     display: flex;
     justify-content: space-between;
 
+    @media @mobile {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
     .destination {
       width: 30%;
       margin-bottom: 30px;
+
+      @media @mobile {
+        width: 80%;
+        
+      }
+     
+
+      .btn {
+
+        @media @mobile {
+          .button-mixin(100%, 35px, aqua, black);
+          
+          padding-left: 0%;
+        
+          &:hover {
+            background-color: black;
+            color: white;
+          } 
+          
+        }
+      
+      }
     }
-  }
-}// home
+}  }
+// home
